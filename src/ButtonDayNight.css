@@ -1,0 +1,143 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+#root {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+label {
+    position: relative;
+    width: 170px;
+    height: 50px;
+    display: block;
+    background: url('images/image1.gif');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid rgba(198, 247, 253, 0.3);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 1s ease;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+label::after {
+    content: '';
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    top: 7px;
+    left: 6px;
+    transition: 0.8s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border: 10px solid rgba(198, 247, 253, 0.3);
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: 0.8s ease;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.18);
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #9ad6f7;
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+input:checked~label::after {
+    left: 164px;
+    transform: translateX(-100%);
+    background: #777ba5;
+
+}
+
+input:checked~label::before {
+    left: 167px;
+    border: 10px solid rgba(90, 79, 136, 0.2);
+    transform: translateX(-100%);
+}
+
+input:checked~label {
+    background: url('images/image2.gif');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid rgba(90, 79, 136, 0.2);
+}
+
+input:checked~.background {
+    background: #0e377c;
+}
+
+input {
+    display: none;
+}
+
+.check-wrapper {
+    display: block;
+    font-family: monospace;
+    font-size: 200%;
+    /* width: 50%; */
+    position: fixed;
+    z-index: 2;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.day {
+    opacity: 0.4;
+}
+
+.night::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a2a43;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
