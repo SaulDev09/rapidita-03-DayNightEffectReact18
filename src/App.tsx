@@ -1,4 +1,4 @@
-import './buttonDayNight.css'
+import './ButtonDayNight.css'
 import { useState } from 'react';
 import ButtonSwitch from './ButtonDayNight';
 
